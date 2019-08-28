@@ -7,19 +7,16 @@ package lesson02;
  //       everyNth("abcdefg", 3) → "adg"
 
 public class MyString {
+    public String eachNth(String str, int n){
+        String result = "";
+//        System.out.println("input= "+str);
+        if (str.isEmpty ()) return result;
 
-    public static void main(String[] args) {
-        System.out.println("abcdef");
-        String cde = "cde12345";
-        System.out.println("abc" + cde);
-        String c = "012345".substring(1,3);
-        System.out.println(c);
-        String d = cde.substring(1, 4);
-        System.out.println(d);
-        String e = "012345";
-        System.out.println(e);
-
+        for (int i = 0; i <str.length();) {
+//            System.out.println (i + " = " + result);
+            result = result + str.charAt (i);
+            i=i+n;
+        }
+        return result;
     }
-
 }
-
